@@ -12,10 +12,10 @@ def getInfoFromJson(path):
                 print(shop['id'])
                 print(shop['name'])
                 num+=1
-                with open('./GaoDeFile/shopId.txt','a+') as fp:
+                with open(path+'/shopId.txt','a+') as fp:
                     fp.write(shop['name']+'\t'+shop['id'])
                     fp.write('\n')
     print('共计'+str(num)+'个商家')
 
 if __name__ == '__main__':
-    getInfoFromJson('./GaoDeFile/jsonfile/ZaoJiao')
+    getInfoFromJson('./GaoDeFile/jsonfile/YouErJiaoYu')
